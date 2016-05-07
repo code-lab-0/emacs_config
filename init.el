@@ -9,9 +9,10 @@
 		(list nil 
 			  (concat (getenv "HOME") "/.emacs.d/emacs_config/")
 			  (concat (getenv "HOME") "/.emacs.d/emacs-expect/")
-			  (concat (getenv "HOME") "/elpa/deferred-20160109.2046/")
-			  (concat (getenv "HOME") "/elpa/dash-20160306.1222/")
-			  (concat (getenv "HOME") "/elpa/pcre2el-20151213.234/")
+			  ;;(concat (getenv "HOME") "/elpa/color-theme-6.6.1/")
+			  (concat (getenv "HOME") "/.emacs.d/elpa/deferred-20160109.2046/")
+			  (concat (getenv "HOME") "/.emacs.d/elpa/dash-20160306.1222/")
+			  (concat (getenv "HOME") "/.emacs.d/elpa/pcre2el-20151213.234/")
 			  ) load-path))
 
 (load "oga.el")
