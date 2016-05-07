@@ -35,12 +35,12 @@
 ;; color-theme.el
 ;; apt-get install emacs-goodies-el
 
-(require 'color-theme)
-(color-theme-initialize)
+;;(require 'color-theme)
+;;(color-theme-initialize)
 
-(if (display-graphic-p)
-	(color-theme-gray30)
-  (color-theme-aalto-light))
+;;(if (display-graphic-p)
+(load-theme 'tango)
+;;  (load-theme 'color-theme-aalto-light))
 ;;(color-theme-blue-mood)
 ;;
 
