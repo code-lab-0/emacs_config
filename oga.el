@@ -26,19 +26,23 @@
 
 (if (display-graphic-p)
 	(progn
-	  (menu-bar-mode 0) ;; hide menu bar
+	  ;;(menu-bar-mode 0) ;; hide menu bar
 	  (tool-bar-mode 0) ;; hide tool bar
 	  ))
 
+(require 'sr-speedbar)
 
 ;; color-theme.el
 ;; apt-get install emacs-goodies-el
 
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-aalto-light)
+
+(if (display-graphic-p)
+	(color-theme-gray30)
+  (color-theme-aalto-light))
 ;;(color-theme-blue-mood)
-;;(color-theme-gray30)
+;;
 
 ;;;=================================================
 ;;;
