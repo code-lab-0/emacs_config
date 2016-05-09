@@ -30,19 +30,12 @@
 	  (tool-bar-mode 0) ;; hide tool bar
 	  ))
 
-(require 'sr-speedbar)
 
-;; color-theme.el
-;; apt-get install emacs-goodies-el
 
-;;(require 'color-theme)
-;;(color-theme-initialize)
+;; color-theme on Emacs24.
+;; http://aoe-tk.hatenablog.com/entry/20130210/1360506829
+(load-theme 'dichromacy t)
 
-;;(if (display-graphic-p)
-(load-theme 'tango)
-;;  (load-theme 'color-theme-aalto-light))
-;;(color-theme-blue-mood)
-;;
 
 ;;;=================================================
 ;;;
@@ -126,8 +119,8 @@
 
 ;;; emacs bash completion
 ;;; https://github.com/szermatt/emacs-bash-completion
-(require 'bash-completion)
-(bash-completion-setup)
+;;;(require 'bash-completion)
+;;;(bash-completion-setup)
 
 
 ;;;=================================================
@@ -394,6 +387,19 @@
 ;;; scala mode
 ;;;=================================================
 ;;(require 'scala-mode)
+
+
+;;;=================================================
+;;; speedbar
+;;;=================================================
+
+(require 'sr-speedbar)
+;;(setq sr-speedbar-right-side nil) 
+;; extension
+(add-hook 'speedbar-mode-hook
+          '(lambda ()
+             (speedbar-add-supported-extension '("js" "html" "css" "txt" "rst"))))
+(provide 'init_speedbar)
 
 ;;;=================================================
 ;;; toggle-truncate-line
