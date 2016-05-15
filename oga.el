@@ -30,7 +30,7 @@
 	  (tool-bar-mode 0) ;; hide tool bar
 	  ))
 
-
+(defalias 'list-buffers 'ibuffer)
 
 ;; color-theme on Emacs24.
 ;; http://aoe-tk.hatenablog.com/entry/20130210/1360506829
