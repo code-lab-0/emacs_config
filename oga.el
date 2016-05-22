@@ -35,7 +35,7 @@
 ;; color-theme on Emacs24.
 ;; http://aoe-tk.hatenablog.com/entry/20130210/1360506829
 (load-theme 'dichromacy t)
-
+;;(load-theme 'deeper-blue t)
 
 ;;;=================================================
 ;;;
@@ -113,7 +113,7 @@
 ;;;=================================================
 
 (require 'emacs-expect)
-(require 'emacs-expect-util)
+(require 'emacs-expect-utils)
 
 (require 'tramp)
 
