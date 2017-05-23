@@ -1,5 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;    Configuration file for Emacs 
+
 ;;      Osamu Ogasawara (since 2001/05/24)
 ;; 
 ;;--- .emacs ---
@@ -23,6 +24,7 @@
 (setq-default tab-width 4)
 (column-number-mode t)
 
+(setenv "DICTIONARY" "en_GB")
 
 (if (display-graphic-p)
 	(progn
@@ -31,6 +33,14 @@
 	  ))
 
 (defalias 'list-buffers 'ibuffer)
+
+;; (ido-mode 1)
+;; (ido-everywhere 1)
+;; (ido-ubiquitous-mode 1)
+;; (ido-vertical-mode 1)
+
+;; (setq ido-enable-flex-matching t) ;; 中間/あいまい一致
+
 
 ;; color-theme on Emacs24.
 ;; http://aoe-tk.hatenablog.com/entry/20130210/1360506829
@@ -112,10 +122,12 @@
 ;;;
 ;;;=================================================
 
-(require 'emacs-expect)
-(require 'emacs-expect-utils)
+;;(require 'ee-persp)
+;;(require 'emacs-expect)
 
-(require 'tramp)
+
+;; (require 'emacs-expect-utils)
+;; (require 'tramp)
 
 ;;; emacs bash completion
 ;;; https://github.com/szermatt/emacs-bash-completion
@@ -378,7 +390,7 @@
 ;;; python-magic
 ;;; http://stackoverflow.com/questions/4079648/combine-python-mode-with-org-mode-for-emacs/4093889#4093889
 ;;;=================================================
-;(require 'python-magic)
+(require 'python-magic)
 
 
 
@@ -386,7 +398,7 @@
 ;;;=================================================
 ;;; scala mode
 ;;;=================================================
-;;(require 'scala-mode)
+(require 'scala-mode)
 
 
 ;;;=================================================
@@ -413,6 +425,13 @@
   (recenter))
 
 (global-set-key "\C-c\C-l" 'toggle-truncate-lines)
+
+;;;=================================================
+;;; Yaml mode
+;;;=================================================
+
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
 
 ;;;=================================================
